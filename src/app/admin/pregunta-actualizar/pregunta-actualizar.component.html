@@ -1,0 +1,19 @@
+<form [formGroup]="preguntaActualizarForm" (ngSubmit)="actualizarPregunta()"> 
+    <div>
+        <h2>Reglas</h2>
+        <p>Ingrese el tipo de dato correcto para el campo que corresponda.</p>        
+    </div>
+    <label for="examenID">examenID: </label>
+    <input type="number" name="examenID" id="examenID" formControlName="examenID">
+        
+    <label for="preguntaID">preguntaID: </label>
+    <input type="number" id="preguntaID" formControlName="preguntaID">
+    
+    <label for="pregunta">pregunta</label>
+    <input type="text" id="pregunta" formControlName="pregunta">
+        
+
+    <button type="submit" [disabled]="!preguntaActualizarForm.valid" >Actualizar pregunta</button>
+    
+</form>
+

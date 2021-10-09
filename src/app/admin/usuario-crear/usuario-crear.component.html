@@ -1,0 +1,14 @@
+<form [formGroup]="usuarioCrearForm" (ngSubmit)="createUser()">
+    <label for="email">email: </label>
+    <input name="email" id="email" formControlName="email">
+        
+    <label for="password">password: </label>
+    <input type="password" id="password" formControlName="password">
+    
+    <label for="especialista">especialista</label>
+    <select name="especialista" id="especialista" formControlName="especialista">
+        <option [value]="true">Si</option>
+        <option [value]="false">No</option>
+    </select>
+    <button type="submit" [disabled]="!usuarioCrearForm.valid" >Crear usuario</button>
+</form>

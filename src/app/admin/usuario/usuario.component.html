@@ -1,0 +1,33 @@
+<div class="container">
+    <h1>Usuarios</h1>
+    
+    <button class="btn-crear" (click)="createUser()">Nuevo Usuario</button>
+    <br>
+    <br>
+    <table class="table table-warning">
+    
+        <th>UsuarioID</th>
+        <th>Usuario</th>
+        <th>Especialista?</th>
+    
+    <tbody *ngFor="let usuario of usuarios; trackBy: trackByUsuarioID">
+        <tr>
+        <td>
+            {{usuario.usuarioID}}
+        </td>
+        <td>
+            {{usuario.email}}
+        </td>
+        <td>
+            {{usuario.especialista ? "Si" : "No"}}
+        </td>
+        <td>
+            <button class="btn-actualizar" (click)="updateUser(usuario.usuarioID)">Actualizar</button>
+        </td>
+        <td>
+            <button class="btn-eliminar" (click)="deleteUser(usuario.usuarioID)" >Eliminar</button>
+        </td>
+        </tr>
+    </tbody>
+    </table>
+</div>

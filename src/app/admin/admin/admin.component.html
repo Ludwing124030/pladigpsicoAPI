@@ -1,0 +1,30 @@
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <h2>Admin</h2>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="items">
+          <div class="navbar-nav">
+
+            <a class="item-select" [routerLink]="['admin']" [routerLinkActive]="'myActive'">De regreso a Admin</a>
+            <a class="item-select" [routerLink]="['citas']" [routerLinkActive]="'myActive'">Citas</a>
+            <a class="item-select" [routerLink]="['pacientes']" [routerLinkActive]="'myActive'">Pacientes</a>
+            <a class="item-select" [routerLink]="['examenes']" [routerLinkActive]="'myActive'">Examenes</a>
+            <a class="item-select" [routerLink]="['preguntas']" [routerLinkActive]="'myActive'">Preguntas</a>
+            <a class="item-select" [routerLink]="['respuestas']" [routerLinkActive]="'myActive'">Respuestas</a>
+            <a class="item-select" [routerLink]="['usuario']" [routerLinkActive]="'myActive'">Usuarios</a>
+            <button class="item-select" (click)="logout()">Cerrar Sesión</button>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <router-outlet></router-outlet>
+</div>

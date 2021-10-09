@@ -1,0 +1,31 @@
+<form [formGroup]="examenActualizarForm" (ngSubmit)="actualizarExamen()"> 
+    <div>
+        <h2> Examen a actualizar </h2>
+        {{"examenID: "  }} {{examen.examenID}}
+        <tr></tr>
+        {{"Fecha creacion: "  }} {{examen.fechaCreacion}}
+        <tr></tr>
+        {{"titutlo: "  }} {{examen.titulo}}
+        <tr></tr>
+        {{"codigo: "  }} {{examen.codigo}}
+        <tr></tr>
+        {{"habilitado: "}} {{examen.habilitado}}
+    </div>
+    <tr></tr>
+    <tr></tr>
+    <div>
+        <h2>Reglas</h2>
+        <p>Ingrese el tipo de dato correcto para el campo que corresponda.</p>
+        <p>habilitado es: true o false</p>
+    </div>
+    <label for="campo">Campo: </label>
+    <select name="campo" id="campo" formControlName="campo">
+        <option *ngFor="let campo of campos" [value]="campo">{{campo}}</option>
+    </select>
+
+    <label for="nuevoValor">Nuevo valor: </label>
+    <input type="text" id="nuevoValor" formControlName="nuevoValor">
+
+    <button type="submit" [disabled]="!examenActualizarForm.valid" >Actualizar examen</button>
+    
+</form>

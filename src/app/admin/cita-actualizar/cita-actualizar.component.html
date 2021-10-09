@@ -1,0 +1,42 @@
+<div class="container">
+    <form [formGroup]="citaActualizarForm" (ngSubmit)="actualizarCita()">
+        <div>
+            <h2> Cita a actualizar </h2>
+            {{"fecha: " }} {{cita.horario.fecha}}
+            <tr></tr>
+            {{"paciente:" }} {{cita.paciente.primer_nombre + ' ' + cita.paciente.primer_apellido}}
+            <tr></tr>
+            {{"estado actual:"}} {{cita.estadoID}}
+        </div>
+        <tr></tr>
+        <tr></tr>
+        <div>
+            <h2>Reglas</h2>
+            <p>Estados posibles:</p>
+            <ol>
+                <li>confirmada por el paciente</li>
+                <li>cancelado por el paciente</li>
+                <li>cancelado porque la especialista estara ocupada</li>
+                <li>finalizada</li>
+                <li>el paciente se ausento sin notificar</li>
+            </ol>
+            <p>Para cambiar la fecha cancele la cita e ingrese la cita con la nueva fecha</p>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+            <label for="campo" class="form-label">Campo: </label>
+            <select name="campo" class="form-select" id="campo" formControlName="campo">
+                <option *ngFor="let campo of campos" [value]="campo">{{campo}}</option>
+            </select>
+
+            <label for="nuevoValor" class="form-label">Nuevo valor: </label>
+            <input type="number" class="form-control" id="nuevoValor" formControlName="nuevoValor">
+
+            <br>
+
+            <input type="submit" class="btn-actualizar" [disabled]="!citaActualizarForm.valid" value="Actualizar">
+            <br>
+        </div>
+        </div>
+    </form>
+</div>

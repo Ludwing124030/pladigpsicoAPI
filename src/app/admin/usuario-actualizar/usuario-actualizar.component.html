@@ -1,0 +1,36 @@
+<div class="container">
+    <form [formGroup]="usuarioActualizarForm" (ngSubmit)="actualizarUsuario()">
+        <div>
+            <h2> Usuario a actualizar </h2>
+            {{"UsuarioID: " }} {{usuario.usuarioID}}
+            <tr></tr>
+            {{"email: " }} {{usuario.email}}
+            <tr></tr>
+            {{"especialista:" }} {{usuario.especialista}}
+        </div>
+        <tr></tr>
+        <tr></tr>
+        <div>
+            <h2>Reglas</h2>
+            <p>Si el campo es password debe tener minimo 8 caracteres, se recomienda utilizar letras mayusculas,
+                minusculas,
+                numeros y simbolos</p>
+            <p>Si el campo es especialista debe escribir true para si y false para no</p>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label for="campo" class="form-label">Campo: </label>
+                <select name="campo" class="form-select" id="campo" formControlName="campo">
+                    <option *ngFor="let campo of campos" [value]="campo">{{campo}}</option>
+                </select>
+
+                <label for="nuevoValor" class="form-label">Nuevo valor: </label>
+                <input type="text" class="form-control" id="nuevoValor" formControlName="nuevoValor">
+            </div>
+        </div>
+        <br>
+        <button class="btn-actualizar" type="submit" [disabled]="!usuarioActualizarForm.valid">Actualizar campo</button>
+
+    </form>
+    <br>
+</div>

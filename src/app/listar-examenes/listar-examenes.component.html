@@ -1,0 +1,28 @@
+<div>
+
+    <div class="fondo">
+        <br>
+        <div class="container fondo-container">
+            <h1>Lista De Tests</h1>
+            <tr></tr>
+            <table class="table table-striped">
+                <th>No. Examen</th>
+                <th>Nombre Del Examen</th>
+                <tbody *ngFor="let examen of examenes; trackBy: trackByExamenID">
+                    <tr>
+                        <td>
+                            {{examen.examenID}}
+                        </td>
+                        <td>
+                            {{examen.titulo}}
+                        </td>
+                        <td>
+                            <button class="btn-examen" (click)="realizarExamen(examen)">Realizar Examen</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+    </div>
+</div>

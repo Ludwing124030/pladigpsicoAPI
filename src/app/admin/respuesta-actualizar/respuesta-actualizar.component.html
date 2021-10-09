@@ -1,0 +1,35 @@
+<form [formGroup]="respuestaActualizarForm" (ngSubmit)="actualizarRespuesta()"> 
+    <div>
+        <h2> Examen a actualizar </h2>
+        {{"ExamenID : "  }} {{respuesta.examenID}}
+        <tr></tr>
+        {{"PreguntaID : "  }} {{respuesta.preguntaID}}
+        <tr></tr>
+        {{"RespuestaID :"  }} {{respuesta.respuestaID}}
+        <tr></tr>
+        {{"Respuesta :"  }} {{respuesta.respuesta}}
+        <tr></tr>
+        {{"Seleccion :"  }} {{respuesta.seleccion}}
+        
+    </div>
+    <tr></tr>
+    <tr></tr>
+    <div>
+        <h2>Reglas</h2>
+        <p>Ingrese el tipo de dato correcto para el campo que corresponda.</p>        
+    </div>
+    
+    <label for="campo">Campo: </label>
+    <select name="campo" id="campo" formControlName="campo">
+        <option *ngFor="let campo of campos" [value]="campo">{{campo}}</option>
+    </select>
+
+    <label for="nuevoValor">Nuevo valor: </label>
+    <input type="text" id="nuevoValor" formControlName="nuevoValor">
+    
+
+    <button type="submit" [disabled]="!respuestaActualizarForm.valid" >Actualizar respuesta</button>
+    
+</form>
+
+

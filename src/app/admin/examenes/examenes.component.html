@@ -1,0 +1,35 @@
+<div class="container">
+    <h1>Examenes</h1>
+    
+    <button class="btn-crear" (click)="createExamen()">Crear Examen</button>
+    <br>
+    <br>
+    <table class="table table-info">
+        <th>ExamenID</th>
+        <th>Titulo</th>
+        <th>Codigo</th>
+        <th>Habilitado</th>
+    <tbody *ngFor="let examen of examenes; trackBy: trackByExamenID">
+        <tr>
+        <td>
+            {{examen.examenID}}
+        </td>
+        <td>
+            {{examen.titulo}}
+        </td>
+        <td>
+            {{examen.codigo}}
+        </td>
+        <td>
+            {{examen.habilitado}}
+        </td>
+        <td>
+            <button class="btn-actualizar" (click)="updateExamen(examen)">Actualizar</button>
+        </td>
+        <td>
+            <button class="btn-eliminar" (click)="deleteExamen(examen.examenID)">Eliminar</button>
+        </td>
+        </tr>
+    </tbody>
+    </table>
+</div>

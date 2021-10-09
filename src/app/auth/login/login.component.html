@@ -1,0 +1,23 @@
+<div class="fondo">
+  <div class="container">
+    <div class="fondo-container">
+      <div class="login-form">
+        <h2 class="login">Login</h2>
+
+        <form [formGroup]="usuarioCredencialesForm" (ngSubmit)="iniciarSesion()">
+          <label for="usuario" class="form-label">Usuario: </label>
+          <input type="text" class="form-control" id="usuario" formControlName="usuario">
+
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" formControlName="password">
+          <!-- <p>{{message}}</p> -->
+          <br>
+          <button class="btn-iniciar" type="submit" [disabled]="!usuarioCredencialesForm.valid">Iniciar Sesión</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>
+

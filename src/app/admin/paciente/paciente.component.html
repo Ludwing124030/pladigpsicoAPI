@@ -1,0 +1,34 @@
+<div class="container">
+    <h1>Pacientes</h1>
+    <table class="table table-info">
+        <th>pacienteID</th>
+        <th>Paciente</th>
+        <th>telefono</th>
+        <th>email</th>
+        <tbody *ngFor="let paciente of pacientes; trackBy: trackByPacienteID">
+            <tr>
+                <td>
+                    {{paciente.pacienteID}}
+                </td>
+                <td>
+                    {{
+                    paciente.primer_nombre + " " +
+                    paciente.segundo_nombre + " " +
+                    paciente.primer_apellido + " " +
+                    paciente.segundo_apellido
+                    }}
+                </td>
+                <td>
+                    {{paciente.telefono}}
+                </td>
+                <td>
+                    {{paciente.email}}
+                </td>
+                <td>
+                    <button class="btn-actualizar" (click)="updatePaciente(paciente)">Actualizar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

@@ -1,0 +1,30 @@
+
+.items{
+    margin-top: 10%;
+    margin-left: 10%;
+}
+.item-select{
+    display:block;
+    padding:.5rem 2rem;
+    text-decoration: none;
+    color: #17006b;
+    font-weight: 600;
+    border:none;
+ 
+}
+
+.item-select:hover{
+    background-color: #3d455a;
+    color: white;
+    cursor:pointer;
+    font-weight: 400;
+}
+
+.myActive{
+    background-color: #3d455a;
+    color: white;
+}
+
+.btn-cerrar{
+    border:none;
+}

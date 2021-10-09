@@ -1,0 +1,49 @@
+<div class="container">
+    <h1>Citas</h1>
+    <tr></tr>
+    <table class="table table-info">
+        <th>estadoID</th>
+        <th>pacienteID</th>
+        <th>Paciente</th>
+        <th>telefono</th>
+        <th>email</th>
+        <th>fechaDeCita</th>
+        <th>comentario</th>
+        <!-- <th>Acciones</th> -->
+    <tbody *ngFor="let cita of citas; trackBy: trackByCitaID">
+        <tr>
+        <td>
+            {{cita.estadoID}}
+        </td>
+        <td>
+            {{cita.paciente.pacienteID}}
+        </td>
+        <td>
+            {{
+                cita.paciente.primer_nombre + " " + 
+                cita.paciente.segundo_nombre + " " +   
+                cita.paciente.primer_apellido + " " + 
+                cita.paciente.segundo_apellido
+            }}
+        </td>
+        <td>
+            {{cita.paciente.telefono}}
+        </td>
+        <td>
+            {{cita.paciente.email}}
+        </td>
+        <td>
+            {{cita.horario.fecha}}
+        </td>
+        <td>
+            {{cita.comentario}}
+        </td>
+        
+        <td>
+            <button class="btn-actualizar" (click)="updateCita(cita)">Actualizar</button>
+        </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+

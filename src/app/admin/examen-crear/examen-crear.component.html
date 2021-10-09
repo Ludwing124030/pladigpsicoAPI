@@ -1,0 +1,22 @@
+<div class="container">
+    <h2>Crear Examen</h2>
+    <form [formGroup]="examenCrearForm" (ngSubmit)="createExamen()">
+        <div class="row">
+            <div class="col-md-4">
+                <label for="titulo" class="form-label">titulo: </label>
+                <input type="text" class="form-control" name="titulo" id="titulo" formControlName="titulo">
+
+                <label for="codigo" class="form-label">codigo: </label>
+                <input type="number" class="form-control" id="codigo" formControlName="codigo">
+
+                <label for="habilitado" class="form-label">habilitado</label>
+                <select name="habilitado" class="form-select" id="habilitado" formControlName="habilitado">
+                    <option [value]="true">Si</option>
+                    <option [value]="false">No</option>
+                </select>
+                <br>
+                <button class="btn-crear" type="submit" [disabled]="!examenCrearForm.valid">Crear Examen</button>
+            </div>
+        </div>
+    </form>
+</div>

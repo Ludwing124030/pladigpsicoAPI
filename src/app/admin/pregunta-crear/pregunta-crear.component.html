@@ -1,0 +1,17 @@
+<div class="container">
+    
+    <form [formGroup]="preguntaCrearForm" (ngSubmit)="createPregunta()">
+        <label for="examenID">examenID: </label>
+        <input type="number" name="examenID" id="examenID" formControlName="examenID">
+
+        <label for="preguntaID">preguntaID: </label>
+        <input type="number" id="preguntaID" formControlName="preguntaID">
+
+        <label for="pregunta">pregunta</label>
+        <input type="text" id="pregunta" formControlName="pregunta">
+
+
+        <button type="submit" [disabled]="!preguntaCrearForm.valid">Crear pregunta</button>
+
+    </form>
+</div>

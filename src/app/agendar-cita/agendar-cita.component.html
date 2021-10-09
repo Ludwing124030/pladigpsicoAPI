@@ -1,0 +1,75 @@
+<div class="fondo">
+    <br>
+    <br>
+    <div class="container fondo-form">
+        <div>
+            <form [formGroup]="citaCrearForm" (ngSubmit)="crearCita()">
+                <div class="titulo">
+                    <h2>Información Personal</h2>
+                </div>
+                <p class="titulo">Debes llenar los campos para agendar una cita, nos comunicaremos a tu teléfono para
+                    confirmar tu cita.</p>
+                <hr>
+                <br>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <label for="primer_nombre" class="form-label">Primer nombre: </label>
+                            <input type="text" class="form-control" name="primer_nombre" id="primer_nombre"
+                                formControlName="primer_nombre" value="test" autocomplete="off">
+                        </div>
+                        <div class="col-md-5">
+                            <label for="segundo_nombre" class="form-label">Segundo nombre: </label>
+                            <input type="text" class="form-control" id="segundo_nombre" formControlName="segundo_nombre"
+                                value="test" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <label for="primer_apellido" class="form-label">Primer apellido: </label>
+                            <input type="text" class="form-control" id="primer_apellido"
+                                formControlName="primer_apellido" value="test" autocomplete="off">
+                        </div>
+                        <div class="col-md-5">
+                            <label for="segundo_apellido" class="form-label">Segundo apellido: </label>
+                            <input type="text" class="form-control" id="segundo_apellido"
+                                formControlName="segundo_apellido" value="test" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <label for="email" class="form-label">Correo Electrónico: </label>
+                            <input type="text" class="form-control" id="email" formControlName="email" value="test"
+                                autocomplete="off">
+                        </div>
+                        <div class="col-md-5">
+                            <label for="telefono" class="form-label">Teléfono: </label>
+                            <input type="number" class="form-control" id="telefono" formControlName="telefono"
+                                value="12345678" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <label for="horario" class="form-label">Horario: </label>
+                            <select name="horario" class="form-select" id="horario" formControlName="horario">
+                                <option *ngFor="let horario of horarios" [value]="horario.horarioID">{{horario.fecha}}
+                                </option>
+                            </select>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="comentario" class="form-label">comentario: </label>
+                            <input type="text" class="form-control" id="comentario" formControlName="comentario"
+                                value="test" autocomplete="off">
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <div class="bloque">
+                    <input type="submit" [disabled]="!citaCrearForm.valid" class="btn-agendar" value="Agendar cita">
+                </div>
+                <hr>
+            </form>
+        </div>
+    </div>
+    <br>
+</div>

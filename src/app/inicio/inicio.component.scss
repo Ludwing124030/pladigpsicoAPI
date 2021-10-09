@@ -1,0 +1,213 @@
+// .fondoServicios{
+//     background-image: url(../../../assets/fondos/servicios.jpg);
+//     background-repeat: no-repeat;
+//     background-attachment: scroll;
+//   }
+  
+//   .fondoHorarios{
+//     background-image: url(../../../assets/fondos/colores.jpg);
+//   }
+
+$light-pink: #E675CA; 
+$dark-pink: #991E7B;
+$dark-purple: #561044;
+$cool-black: #0A0908;
+$cool-white: #F5FBEF ;
+$greyish: #726E60;
+$greenish: #898952;
+
+
+* {
+  box-sizing: border-box;
+}
+
+.fondo {
+  font-size: 20px;
+  font-family: Roboto;
+  color: $cool-black;
+  
+  background: linear-gradient(93deg, #e675ca, $greenish, #561044);
+  background-size: 400% 400%;
+
+  -webkit-animation: myFondo 32s ease infinite;
+  -moz-animation: myFondo 32s ease infinite;
+  animation: myFondo 32s ease infinite;
+}
+
+@-webkit-keyframes myFondo {
+  0%{background-position:0% 55%}
+  50%{background-position:100% 46%}
+  100%{background-position:0% 55%}
+}
+@-moz-keyframes myFondo {
+  0%{background-position:0% 55%}
+  50%{background-position:100% 46%}
+  100%{background-position:0% 55%}
+}
+@keyframes myFondo {
+  0%{background-position:0% 55%}
+  50%{background-position:100% 46%}
+  100%{background-position:0% 55%}
+}
+
+
+  .fondo-servicio{
+    background: #E9EAEF;
+    border-radius: 1rem;
+  }
+  .colorDeLetras{
+    color: #ffffff;
+  }
+  
+  .slide img{
+    height: 65vh;
+    background: #3d4864;
+    opacity: .9;
+  }
+  
+  .d-md-block{
+    background: #0c0e13;
+    opacity: .7;
+    border-radius: 1rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+  
+  .contenido-servicio{
+    color: #1f8ff8;
+    align-content: center;
+    margin-top: 1rem;
+    text-align: center;
+    background: #3d455a;
+    border-radius: 1rem;
+    padding-top:2rem;
+    padding-bottom: 1rem;
+  }
+  
+  .subrayado{
+    padding-top: 3rem;
+    width: 10rem;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    border-bottom: 5px solid #ffffff;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  
+  .horario{
+    padding-top: 3rem;
+    width: 20rem;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    border-bottom: 5px solid #ffffff;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  
+  .row{
+    margin-top: 3rem;
+  }
+  
+  .col-md-1{
+    margin-left: 2rem;
+  }
+  
+  .tarjeta{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    /* transform-style: preserve-3d; */
+    position:relative;
+  }
+  
+  /* .card:hover{
+    transform: translateY(-15);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+  } */
+  
+  .card-body{
+    background: rgb(237, 240, 209);
+  }
+  
+  .card-estudios{
+    background:rgba(0, 0, 0, 0.795) ;
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.849);
+    color: #ffffff;
+  }
+  
+  .card-title{
+    text-align: center;
+    color: #1f8ff8;
+  }
+  
+  .card-text{
+    text-align: justify;
+    font-size: 20px;
+  }
+  .container-boton{
+    position: fixed;
+    border-radius: 4rem;
+    z-index: 999;
+    bottom:20px;
+    right: 20px;
+    padding: 50px;
+    /* transition: ease 0.3s;
+    animation: efecto 1.2s infinite; */
+  }
+  
+  .card-title{
+    margin-top: 2rem;
+  }
+  
+  .card-text{
+    text-align: justify;
+    list-style-position: inside;
+    margin-top: 3rem;
+  }
+  
+  .container-boton:hover{
+    transform: scale(1.1);
+    transition: 0.3;
+  }
+  .btn-wsp{
+    position: fixed;
+    margin: 0px;
+    width: 80px;
+    height: 80px;
+    bottom: 30px;
+    right: 30px;
+    text-align: center;
+    border-radius: 3rem;
+    transition: ease 1s;
+  }
+  /* 
+  @keyframes efecto {
+    0%{
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.85);
+    }
+    100%{
+      box-shadow: 0 0 0 25px rgba(0, 0, 0, 0);
+    }
+  } */
+  
+  .horario{
+    text-align: center;
+  }
+  
+  .tarjeta-contacto{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    position:relative;
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.849);
+    margin: 2rem;
+    text-align: center;
+  }
+  
+  .reservarCita{
+    background:#3d4864;
+    padding: 0.5rem;
+  }
+
+
+  a{
+    text-decoration: none;
+  }

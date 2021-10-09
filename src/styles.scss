@@ -1,0 +1,270 @@
+// $light-pink: #E675CA; 
+// $dark-pink: #991E7B;
+// $dark-purple: #561044;
+// $cool-black: #0A0908;
+// $cool-white: #F5FBEF ;
+// $greyish: #726E60;
+// $greenish: #898952;
+
+
+// * {
+//   box-sizing: border-box;
+// }
+
+// html {
+//   font-size: 20px;
+//   font-family: Roboto;
+//   color: $cool-black;
+  
+//   background: linear-gradient(93deg, #e675ca, $greenish, #561044);
+//   background-size: 400% 400%;
+
+//   -webkit-animation: myFondo 32s ease infinite;
+//   -moz-animation: myFondo 32s ease infinite;
+//   animation: myFondo 32s ease infinite;
+// }
+
+// @-webkit-keyframes myFondo {
+//   0%{background-position:0% 55%}
+//   50%{background-position:100% 46%}
+//   100%{background-position:0% 55%}
+// }
+// @-moz-keyframes myFondo {
+//   0%{background-position:0% 55%}
+//   50%{background-position:100% 46%}
+//   100%{background-position:0% 55%}
+// }
+// @keyframes myFondo {
+//   0%{background-position:0% 55%}
+//   50%{background-position:100% 46%}
+//   100%{background-position:0% 55%}
+// }
+
+// h1 {
+//   font-size: 2rem;
+//   text-align: center;
+// }
+
+// h2 {
+//   font-size: 1.5rem;
+//   text-align: left;
+// }
+
+// p {
+//   font-size: .8rem;
+//   width: 50vw;
+//   text-align: justify;
+//   hyphens: auto;
+// }
+
+// header {
+//   border-style: solid;
+//   border-color: $light-pink;
+//   border-width: 0 0 .1rem 0;
+//   padding: .5rem;
+//   box-shadow: 0px 3px 15px $cool-black;
+//   z-index: 4;
+//   background: $cool-white;
+  
+//   img {
+//     padding-left: 1rem;
+//     padding-top: 1rem;
+//     width: 10rem;
+//     height: 10rem;
+//   }
+  
+//   nav{
+//     ul {
+//       display: flex;
+//       flex-direction: row;
+//       justify-content: flex-end;
+//       list-style: none;
+      
+//       li {
+//         // margin-left: auto;
+//         a {
+//       margin-right: .4rem;
+//       padding: .4rem;
+//       border: .1rem solid $dark-purple;
+//       text-decoration: none;
+//       /*Copy paste from button with classes I could extend but that means to copy paste them in the HTML...*/
+//       background: $cool-white;
+//       text-transform: uppercase;
+//       font-size: 0.69rem;
+//       color: $cool-black;
+//       border-style: none;
+//       border-color: $dark-purple;
+//       border-radius: 3px;
+//       text-shadow: 0 -1px 0 #000;
+//       box-shadow: 0 1px 0 $dark-purple, 0 5px 0 $dark-purple, 0 6px 6px $dark-purple;
+//     }
+    
+    
+//       a:hover {
+//       background: linear-gradient(0deg, rgba(86,16,68,1) 25%, rgba(137,137,82,1) 84%);
+//       color: $cool-white;
+//       cursor: pointer;
+//     }
+    
+//       a:active {
+//       color: $cool-white;
+//       background: $greyish;
+//         //linear-gradient(180deg, rgba(137,137,82,1) 75%, rgba(86,16,68,1) 100%);
+//       z-index: -1;
+//       // text-shadow: 0 -1px 0 $cool-white, 0 0 5px $cool-white, 0 0 8px $cool-white;
+//       box-shadow:  0 1px 0 $dark-purple, 0 5px 0 $dark-purple, 0 6px 2px $dark-purple;
+//       transform: translateY(3px);
+//       animation: none;
+//     }  
+//       }
+      
+      
+//     }
+    
+//   }
+//  }
+
+
+ 
+// table {
+//   margin-top: .4rem;
+//   thead {
+//     font-size: 1.2rem;
+//     color: $cool-white;
+//     background: linear-gradient(180deg, rgba(230,117,202,1) 25%, rgba(86,16,68,1) 84%);
+    
+//     th{
+//       padding: .5rem;
+//       box-shadow: 0px 3px 15px $cool-black;
+//       z-index: 2;  
+//     }
+    
+//   }
+//   tbody{
+    
+//     td{
+//       text-align: justify;
+//       hyphens: auto;
+//       padding: .5rem; 
+//       border: 2px solid $dark-purple;     
+//       button {
+//         border-color: $greenish;
+//       }
+//     }
+//     tr{
+//       td:last-child{
+//         border: none;
+//         background: $cool-white;
+//       }
+      
+//     }
+    
+//     tr:hover {
+//       background: $light-pink;
+//       color: $cool-black;
+//       font-size: 1.1rem;
+//       font-weight: 700;
+//     }
+//   }
+// }
+
+// button {
+//   z-index: 1;
+//   margin-top: .2rem;
+//   background: $cool-white;
+//   text-transform: uppercase;
+//   font-size: 0.69rem;
+//   color: $cool-black;
+//   border-style: none;
+//   border-color: $dark-purple;
+//   border-radius: 3px;
+//   text-shadow: 0 -1px 0 #000;
+//   box-shadow: 0 1px 0 $dark-purple, 0 5px 0 $dark-purple, 0 6px 6px $dark-purple;
+// }
+
+// button:hover {
+//   background: linear-gradient(0deg, rgba(86,16,68,1) 25%, rgba(137,137,82,1) 84%);
+//   color: $cool-white;
+//   cursor: pointer;
+// }
+
+// button:active{
+//   background: linear-gradient(180deg, rgba(137,137,82,1) 90%, rgba(86,16,68,1) 100%);
+//   text-shadow: 0 -1px 0 $greyish, 0 0 5px $greyish, 0 0 8px $greyish;
+// 	box-shadow:  0 1px 0 $dark-purple, 0 2px 0 $dark-purple, 0 2px 2px $dark-purple;
+// 	transform: translateY(3px);
+// 	animation: none;
+// }
+
+// form, .Myform {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: flex-start;
+//   flex: 50vw;
+//   padding-bottom: auto;
+//   label {
+//     padding-top: 10px;
+//     padding-bottom: 5px;
+//     font-size: 1.1rem;
+//     text-transform: uppercase;
+//     text-decoration: underline $light-pink;
+//   }
+//   input[type=text],
+//   input[type=number],
+//   input[type=textarea] {
+//     font-size: 1.05rem;
+//     border: none;
+//     border-bottom: 2px solid $dark-purple;
+//   }
+  
+//   input[type=text]:focus, 
+//   input[type=number]:focus,
+//   input[type=textarea]:focus{
+//     outline: none;    
+//     border-color: $light-pink;
+//   }
+  
+//   input[type=textarea]:focus {
+//     height: 10vh;
+//     border: 2px solid $light-pink;
+//     border-radius: 0.2rem;
+//   }
+  
+//   input[type=checkbox] {
+//     cursor: pointer;
+//     outline: $dark-purple;
+//   }
+  
+//   input[type=checkbox]:checked {
+//     background: $dark-purple;
+    
+//   }
+  
+//   input:focus + label {
+//     text-decoration: underline $dark-purple;
+//   }
+
+//   input:disabled {
+//     padding: .5rem;
+//   }
+// }
+
+// .subFormX {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: flex-start;
+//   // flex: 50vw;
+//   padding-left: 5vw;
+// }
+
+
+// body, .myBody {
+//   width: 90vw;
+//   height: calc(auto + 5vw);
+//   padding-left: 2vw;
+//   padding-bottom: 2vw;
+//   padding-right: 2vw;
+//   background: $cool-white;
+//   margin: auto;
+  
+// }

@@ -1,0 +1,33 @@
+<form [formGroup]="pacienteActualizarForm" (ngSubmit)="actualizarPaciente()">
+    <div>
+        <h2> Paciente a actualizar </h2>
+        {{"pacienteID: " }} {{paciente.pacienteID}}
+        <tr></tr>
+        {{"nombre: " }} {{paciente.primer_nombre + paciente.primer_apellido}}
+        <tr></tr>
+        {{"email: " }} {{paciente.email}}
+        <tr></tr>
+        {{"telefono: "}} {{paciente.telefono}}
+    </div>
+
+    <div>
+        <h2>Reglas</h2>
+        <p>Ingrese el tipo de dato correcto para el campo que corresponda.</p>
+        <p>El telefono se ingresa sin ' - '</p>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <label for="campo" class="form-label">Campo: </label>
+            <select name="campo" class="form-select" id="campo" formControlName="campo">
+                <option *ngFor="let campo of campos" [value]="campo">{{campo}}</option>
+            </select>
+
+            <label for="nuevoValor" class="form-label">Nuevo valor: </label>
+            <input type="text" class="form-control" id="nuevoValor" formControlName="nuevoValor">
+            <br>
+            <button type="submit" class="btn-actualizar" [disabled]="!pacienteActualizarForm.valid">Actualizar
+                campo</button>
+        </div>
+    </div>
+    <br>
+</form>

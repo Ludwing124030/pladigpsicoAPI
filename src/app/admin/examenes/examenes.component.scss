@@ -1,0 +1,39 @@
+.container{
+    padding: 3rem;
+}
+
+.btn-crear{
+    background: #CB759C;
+    
+    color: white;
+    padding: 0.5rem;
+}
+
+.btn-crear:hover{
+    background: #A23E6B;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-actualizar{
+    background: #6B81AC;
+    color: white;
+    padding: 0.5rem;
+}
+
+.btn-actualizar:hover{
+    background: #3d455a;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-eliminar{
+    background: #FE6067;
+    padding: 0.5rem;
+    color: white;
+}
+
+.btn-eliminar:hover{
+    background: #D05A5F;
+    color: white;
+}

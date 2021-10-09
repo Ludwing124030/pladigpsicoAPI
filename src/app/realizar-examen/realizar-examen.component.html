@@ -1,0 +1,101 @@
+<div class="fondo">
+    <div class="container">
+        <br>
+        <div class="fondo-container">
+            <div class="titulo">
+                <h1>{{titulo}}</h1>
+            </div>
+            <ol>
+                <li value="1">Presiona el botón de "Iniciar Test"</li>
+                <li value="2">Contesta a cada una de las preguntas seleccionando una sola respuesta.</li>
+                <li value="3">Ingresa tus datos personales y el código que se te ha proporcionado.</li>
+                <li value="4">Presina el botón de "Enviar test".</li>
+            </ol>
+            <hr>
+            <button class="btn-test" (click)="getPreguntas()">Iniciar Test</button>
+            <br>
+            <br>
+            <!-- [noValidate]="true" -->
+            <form [formGroup]="examenCrearForm" (ngSubmit)='realizarExamen()' [ngClass]="{'MyForm': true}">
+                <div formArrayName="preguntas" class="subFormX">
+                    <div *ngFor="let pregunta of preguntas().controls; let preguntaIndex = index">
+                        <div [formGroupName]="preguntaIndex">
+                            <label for="preguntaID" class="form-label">{{pregunta.value.prueguntaID}}</label>
+                            <input type="hidden" id="preguntaID" [disabled]=true [value]="pregunta.value.preguntaID">
+                            <label for="pregunta" class="form-label">{{pregunta.value.pregunta}}</label>
+                            <input type="hidden" id="pregunta" [disabled]=true [value]="pregunta.value.pregunta">
+
+                            <div formArrayName="respuestas" class="subFormX" [ngClass]="{'subFormX': true}">
+                                <div
+                                    *ngFor="let respuesta of respuestas(preguntaIndex).controls; let respuestaIndex = index">
+                                    <div [formGroupName]="respuestaIndex" [ngClass]="{'subFormX': true}">
+                                        <!-- <label for="respuestaID">respuestaID:</label> -->
+                                        <input type="hidden" id="respuestaID" [disabled]=true
+                                            [value]="respuesta.value.respuestaID"> 
+                                        <!-- <label for="respuesta">respuesta:</label> -->
+                                        <div *ngIf="respuesta.value.seleccion; else aTaipear">
+                                            <input type="hidden" id="respuesta" [disabled]="true"
+                                                [value]="respuesta.value.respuesta">
+                                                <label for="respuesta">{{respuesta.value.respuesta}}</label>
+                                        </div>
+                                        <ng-template #aTaipear>
+                                            <input type="textarea" id="respuesta" [disabled]="false"
+                                                placeholder="respuesta.value.respuesta" formControlName="respuesta">
+                                        </ng-template>
+                                        <!-- <label for="respuestaDeUsuario">Seleccionar respuesta: </label> -->
+                                        <input type="checkbox" id="respuestaDeUsuario"
+                                            formControlName="respuestaDeUsuario">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div formGroupName="paciente" class="subFormX">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <label for="primer_nombre" class="form-label">Primer nombre: </label>
+                            <input type="text" class="form-control" name="primer_nombre" id="primer_nombre"
+                                formControlName="primer_nombre" autocomplete="off">
+                        </div>
+                        <div class="col-md-5">
+                            <label for="segundo_nombre" class="form-label">Segundo nombre: </label>
+                            <input type="text" class="form-control" id="segundo_nombre" formControlName="segundo_nombre"
+                                autocomplete="off">
+                        </div>
+                        <div class="col-md-5">
+                            <label for="primer_apellido" class="form-lebel">Primer apellido: </label>
+                            <input type="text" class="form-control" id="primer_apellido"
+                                formControlName="primer_apellido" autocomplete="off">
+                        </div>
+                        <div class="col-md-5">
+                            <label for="segundo_apellido" class="form-label">Segundo apellido: </label>
+                            <input type="text" class="form-control" id="segundo_apellido"
+                                formControlName="segundo_apellido" autocomplete="off">
+                        </div>
+
+                        <div class="col-md-5">
+                            <label for="email" class="form-label">email: </label>
+                            <input type="text" class="form-control" id="email" formControlName="email">
+                        </div>
+                        <div class="col-md-5">
+                            <label for="telefono" class="form-label">telefono: </label>
+                            <input type="number" class="form-control" id="telefono" formControlName="telefono" autocomplete="off">
+                        </div>
+                        <div class="col-md-5">
+                            <label for="codigo" class="form-lebel">codigo: </label>
+                            <input type="number" class="form-control" id="codigo" formControlName="codigo">
+                        </div>
+                    </div>
+                    <br>
+                    <!-- <button >Enviar examen</button> -->
+                    <button class="btn-test" [disabled]="!examenCrearForm.valid">Enviar test</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br>
+</div>

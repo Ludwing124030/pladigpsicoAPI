@@ -1,0 +1,23 @@
+<div>
+    <h1>Examenes habilitados</h1>
+    <tr></tr>
+    <table>
+        <thead>
+            <th>examenID</th>
+            <th>titulo</th>
+        </thead>
+        <tbody *ngFor="let examen of examenes; trackBy: trackByExamenID">
+            <tr>
+                <td>
+                    {{examen.examenID}}
+                </td>
+                <td>
+                    {{examen.titulo}}
+                </td>
+                <td>
+                    <button (click)="realizarExamen(examen)">Obtener examen</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

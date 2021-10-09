@@ -1,0 +1,39 @@
+<div>
+    <h1>Respuestas</h1>
+
+    <button class="btn-crear" (click)="createRespuesta()">Crear Respuesta</button>
+    <br>
+    <br>
+    <table class="table table-info">
+        <th>ExamenID</th>
+        <th>PreguntaID</th>
+        <th>RespuestaID</th>
+        <th>Respuesta</th>
+        <th>Seleccion</th>
+    <tbody *ngFor="let respuesta of respuestas; trackBy: trackByRespuestaID">
+        <tr>
+        <td>
+            {{respuesta.examenID}}
+        </td>
+        <td>
+            {{respuesta.preguntaID}}
+        </td>
+        <td>
+            {{respuesta.respuestaID}}
+        </td>
+        <td>
+            {{respuesta.respuesta}}
+        </td>
+        <td>
+            {{respuesta.seleccion ? "Si": "No"}}
+        </td>
+        <td>
+            <button class="btn-actualizar" (click)="updateRespuesta(respuesta)">Actualizar</button>
+        </td>
+        <td>
+            <button class="btn-eliminar" (click)="deleteRespuesta(respuesta)">Eliminar</button>
+        </td>
+        </tr>
+    </tbody>
+    </table>
+</div>

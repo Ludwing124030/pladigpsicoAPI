@@ -1,0 +1,31 @@
+<div class="container">
+    <h1>Preguntas</h1>
+
+    <button class="btn-crear" (click)="createPregunta()">Crear Pregunta</button>
+    <br>
+    <br>
+    <table class="table table-info">
+        <th>ExamenID</th>
+        <th>PreguntaID</th>
+        <th>Pregunta</th>
+        <tbody *ngFor="let pregunta of preguntas; trackBy: trackByPreguntaID">
+            <tr>
+                <td>
+                    {{pregunta.examenID}}
+                </td>
+                <td>
+                    {{pregunta.preguntaID}}
+                </td>
+                <td>
+                    {{pregunta.pregunta}}
+                </td>
+                <td>
+                    <button class="btn-actualizar" (click)="updatePregunta(pregunta)">Actualizar</button>
+                </td>
+                <td>
+                    <button class="btn-eliminar" (click)="deletePregunta(pregunta)">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
